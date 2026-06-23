@@ -102,7 +102,7 @@ export default function BookingForm(): import("react").JSX.Element {
         </select>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
-        <select required value={form.service_id} onChange={(e) => update('service_id', e.target.value)} className="input">
+        <select required aria-label="Select service" value={form.service_id} onChange={(e) => update('service_id', e.target.value)} className="input">
           <option value="">Select Service</option>
           {services.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
         </select>
